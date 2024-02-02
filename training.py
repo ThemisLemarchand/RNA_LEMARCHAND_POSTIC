@@ -91,7 +91,8 @@ for pair in pairs:
 # saving scoring data into files
 for pair in pairs:
      if (pair!="all_distances" and pair!="frequences_ref"):
-        f=open(pair,'w')
+        name="data/"+pair
+        f=open(name,'w')
         for score in pairs[pair]['score']:
             line=str(score)+"\n"
             f.write(line)
