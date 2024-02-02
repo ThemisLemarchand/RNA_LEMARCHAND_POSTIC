@@ -5,6 +5,10 @@
 import re
 import numpy as np
 from math import log
+import sys
+
+# get the inuput file as an argument
+input_file = sys.argv[1]
 
 #creation of the dictionnary that will contain all computed data
 pairs_list = ["AA","AU","AC","AG","UU","UC","UG","CC","CG","GG"]
@@ -18,7 +22,7 @@ for p in pairs_list:
      pairs[p]['score']=[]
 
 # Creation of a dictionnary containing data from pdb file
-f = open("2jyh.pdb","r")
+f = open(input_file,"r")
 lines=f.readlines()
 f.close()
 
