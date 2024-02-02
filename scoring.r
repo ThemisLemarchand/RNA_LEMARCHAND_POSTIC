@@ -26,7 +26,7 @@ for (pair in pairs_list) {
   distance = c(1:19),
   score = tables_list[[pair]]$X0
   )
-  name=paste(pair,".pdf",sep="")
+  name=paste("/plot/",pair,".pdf",sep="")
   pdf(name)
 
   ggplot(data, aes(x = distance, y = score)) +  geom_line() +  geom_point() +
